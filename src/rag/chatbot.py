@@ -80,6 +80,10 @@ class HealthcareChatbot:
                 
                 # Preferred candidate models in priority order
                 preferred_candidates = [
+                    "gemini-3.8-flash",
+                    "gemini-3.5-flash-lite",
+                    "gemini-3-flash",
+                    "gemini-2.5-flash",
                     "gemini-2.0-flash",
                     "gemini-2.0-flash-lite",
                     "gemini-1.5-flash-latest",
@@ -206,6 +210,10 @@ class HealthcareChatbot:
         # Generate via Live Gemini API with automated multi-model fallback
         candidate_models = [self.model_name]
         for fallback in [
+            "gemini-3.8-flash",
+            "gemini-3.5-flash-lite",
+            "gemini-3-flash",
+            "gemini-2.5-flash",
             "gemini-2.0-flash",
             "gemini-2.0-flash-lite",
             "gemini-1.5-flash-latest",
