@@ -1,0 +1,57 @@
+[
+    {
+        "document_id": "niddk_overview",
+        "document_name": "NIDDK Diabetes Overview",
+        "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases (NIH)",
+        "file_format": "txt",
+        "file_path": "D:\\Fresher Projects\\Healthcare AI Assistant with Disease Risk Prediction\\knowledge_base\\documents\\niddk_diabetes_overview.txt",
+        "extraction_status": "Success (Cached)",
+        "character_count": 4831,
+        "last_retrieval_date": "2026-11-09 11:20:17"
+    },
+    {
+        "document_id": "niddk_tests_diagnosis",
+        "document_name": "NIDDK Diabetes Tests and Diagnosis",
+        "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases (NIH)",
+        "file_format": "txt",
+        "file_path": "D:\\Fresher Projects\\Healthcare AI Assistant with Disease Risk Prediction\\knowledge_base\\documents\\niddk_diabetes_tests_diagnosis.txt",
+        "extraction_status": "Success (Cached)",
+        "character_count": 10359,
+        "last_retrieval_date": "2026-11-09 11:20:17"
+    },
+    {
+        "document_id": "who_diabetes_factsheet",
+        "document_name": "WHO Diabetes Information Fact Sheet",
+        "source_url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "publisher": "World Health Organization (WHO)",
+        "file_format": "txt",
+        "file_path": "D:\\Fresher Projects\\Healthcare AI Assistant with Disease Risk Prediction\\knowledge_base\\documents\\who_diabetes_factsheet.txt",
+        "extraction_status": "Success (Cached)",
+        "character_count": 9244,
+        "last_retrieval_date": "2026-11-09 11:20:17"
+    },
+    {
+        "document_id": "niddk_clinical_tools",
+        "document_name": "NIDDK Diabetes & Prediabetes Clinical Management",
+        "source_url": "https://www.niddk.nih.gov/health-information/professionals/clinical-tools-patient-management/diabetes/diabetes-prediabetes",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases (NIH)",
+        "file_format": "txt",
+        "file_path": "D:\\Fresher Projects\\Healthcare AI Assistant with Disease Risk Prediction\\knowledge_base\\documents\\niddk_diabetes_prediabetes_clinical.txt",
+        "extraction_status": "Success (Cached)",
+        "character_count": 9764,
+        "last_retrieval_date": "2026-11-09 11:20:17"
+    },
+    {
+        "document_id": "cdc_prevention",
+        "document_name": "CDC Type 2 Diabetes Prevention",
+        "source_url": "https://www.cdc.gov/diabetes/prevention-type-2/index.html",
+        "publisher": "Centers for Disease Control and Prevention (CDC)",
+        "file_format": "txt",
+        "file_path": "D:\\Fresher Projects\\Healthcare AI Assistant with Disease Risk Prediction\\knowledge_base\\documents\\cdc_type2_diabetes_prevention.txt",
+        "extraction_status": "Success (Cached)",
+        "character_count": 3258,
+        "last_retrieval_date": "2026-11-09 11:20:17"
+    }
+]

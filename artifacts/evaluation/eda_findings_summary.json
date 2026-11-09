@@ -1,0 +1,73 @@
+{
+    "class_distribution": {
+        "negative_class_0": 91500,
+        "positive_class_1": 8500,
+        "negative_percentage": 91.5,
+        "positive_percentage": 8.5,
+        "imbalance_ratio": 10.76
+    },
+    "gender_distribution": {
+        "Female": 58552,
+        "Male": 41430,
+        "Other": 18
+    },
+    "gender_prevalence": {
+        "total": {
+            "Female": 58552,
+            "Male": 41430,
+            "Other": 18
+        },
+        "diabetic": {
+            "Female": 4461,
+            "Male": 4039,
+            "Other": 0
+        },
+        "prevalence_pct": {
+            "Female": 7.618868697909551,
+            "Male": 9.748974173304369,
+            "Other": 0.0
+        }
+    },
+    "biomarker_statistics": {
+        "age": {
+            "count": 100000.0,
+            "mean": 41.89,
+            "std": 22.52,
+            "min": 0.08,
+            "25%": 24.0,
+            "50%": 43.0,
+            "75%": 60.0,
+            "max": 80.0
+        },
+        "bmi": {
+            "count": 100000.0,
+            "mean": 27.32,
+            "std": 6.64,
+            "min": 10.01,
+            "25%": 23.63,
+            "50%": 27.32,
+            "75%": 29.58,
+            "max": 95.69
+        },
+        "HbA1c_level": {
+            "count": 99993.0,
+            "mean": 5.53,
+            "std": 1.07,
+            "min": 3.5,
+            "25%": 4.8,
+            "50%": 5.8,
+            "75%": 6.2,
+            "max": 9.0
+        },
+        "blood_glucose_level": {
+            "count": 100000.0,
+            "mean": 138.06,
+            "std": 40.71,
+            "min": 80.0,
+            "25%": 100.0,
+            "50%": 140.0,
+            "75%": 159.0,
+            "max": 300.0
+        }
+    }
+}

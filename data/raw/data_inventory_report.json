@@ -1,0 +1,57 @@
+{
+    "timestamp": "2026-11-09T11:16:56.627551",
+    "total_records": 100000,
+    "total_columns": 9,
+    "columns": [
+        "gender",
+        "age",
+        "hypertension",
+        "heart_disease",
+        "smoking_history",
+        "bmi",
+        "HbA1c_level",
+        "blood_glucose_level",
+        "diabetes"
+    ],
+    "missing_expected_columns": [],
+    "data_types": {
+        "gender": "str",
+        "age": "float64",
+        "hypertension": "int64",
+        "heart_disease": "int64",
+        "smoking_history": "str",
+        "bmi": "float64",
+        "HbA1c_level": "float64",
+        "blood_glucose_level": "int64",
+        "diabetes": "int64"
+    },
+    "total_missing_values": 7,
+    "missing_per_column": {
+        "gender": 0,
+        "age": 0,
+        "hypertension": 0,
+        "heart_disease": 0,
+        "smoking_history": 0,
+        "bmi": 0,
+        "HbA1c_level": 7,
+        "blood_glucose_level": 0,
+        "diabetes": 0
+    },
+    "duplicate_rows": 3854,
+    "duplicate_percentage": 3.85,
+    "target_column": "diabetes",
+    "target_distribution_counts": {
+        "0": 91500,
+        "1": 8500
+    },
+    "target_distribution_ratios": {
+        "0": 0.915,
+        "1": 0.085
+    },
+    "gender_distribution": {
+        "Female": 58552,
+        "Male": 41430,
+        "Other": 18
+    },
+    "validation_passed": true
+}

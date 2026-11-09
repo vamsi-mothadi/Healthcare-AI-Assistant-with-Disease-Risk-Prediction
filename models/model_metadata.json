@@ -1,0 +1,132 @@
+{
+    "timestamp": "2026-11-09T11:45:34.168353",
+    "selected_model": "Random_Forest",
+    "selected_model_name": "Random Forest Classifier (Balanced)",
+    "train_samples": 76916,
+    "test_samples": 19230,
+    "random_state": 42,
+    "test_size": 0.2,
+    "models_evaluated": {
+        "Logistic_Regression": {
+            "cross_validation_5fold": {
+                "cv_accuracy_mean": 0.8866,
+                "cv_accuracy_std": 0.002,
+                "cv_precision_mean": 0.4306,
+                "cv_recall_mean": 0.8837,
+                "cv_f1_mean": 0.579,
+                "cv_roc_auc_mean": 0.9624
+            },
+            "test_set_metrics": {
+                "accuracy": 0.8828,
+                "precision": 0.4214,
+                "recall_sensitivity": 0.8803,
+                "specificity": 0.8831,
+                "f1_score": 0.57,
+                "true_positives": 1493,
+                "false_positives": 2050,
+                "true_negatives": 15484,
+                "false_negatives": 203,
+                "roc_auc": 0.96,
+                "pr_auc": 0.8173,
+                "brier_score": 0.0804
+            }
+        },
+        "Random_Forest": {
+            "cross_validation_5fold": {
+                "cv_accuracy_mean": 0.8976,
+                "cv_accuracy_std": 0.003,
+                "cv_precision_mean": 0.4598,
+                "cv_recall_mean": 0.916,
+                "cv_f1_mean": 0.6122,
+                "cv_roc_auc_mean": 0.974
+            },
+            "test_set_metrics": {
+                "accuracy": 0.8869,
+                "precision": 0.4335,
+                "recall_sensitivity": 0.9186,
+                "specificity": 0.8839,
+                "f1_score": 0.589,
+                "true_positives": 1558,
+                "false_positives": 2036,
+                "true_negatives": 15498,
+                "false_negatives": 138,
+                "roc_auc": 0.9719,
+                "pr_auc": 0.8691,
+                "brier_score": 0.0674
+            }
+        }
+    },
+    "demographic_fairness": {
+        "overall": {
+            "accuracy": 0.8869,
+            "precision": 0.4335,
+            "recall_sensitivity": 0.9186,
+            "specificity": 0.8839,
+            "f1_score": 0.589,
+            "true_positives": 1558,
+            "false_positives": 2036,
+            "true_negatives": 15498,
+            "false_negatives": 138,
+            "roc_auc": 0.9719,
+            "pr_auc": 0.8691,
+            "brier_score": 0.0674
+        },
+        "gender_Female": {
+            "accuracy": 0.8995,
+            "precision": 0.4442,
+            "recall_sensitivity": 0.9042,
+            "specificity": 0.8991,
+            "f1_score": 0.5957,
+            "true_positives": 840,
+            "false_positives": 1051,
+            "true_negatives": 9364,
+            "false_negatives": 89,
+            "roc_auc": 0.9729,
+            "pr_auc": 0.8685,
+            "brier_score": 0.0624,
+            "sample_count": 11344,
+            "positive_count": 929,
+            "base_rate": 0.0819
+        },
+        "gender_Male": {
+            "accuracy": 0.8688,
+            "precision": 0.4216,
+            "recall_sensitivity": 0.9361,
+            "specificity": 0.8616,
+            "f1_score": 0.5814,
+            "true_positives": 718,
+            "false_positives": 985,
+            "true_negatives": 6130,
+            "false_negatives": 49,
+            "roc_auc": 0.97,
+            "pr_auc": 0.8692,
+            "brier_score": 0.0746,
+            "sample_count": 7882,
+            "positive_count": 767,
+            "base_rate": 0.0973
+        },
+        "gender_Other": {
+            "sample_count": 4,
+            "positive_count": 0,
+            "note": "Insufficient sample size or zero positive cases for reliable statistical evaluation."
+        },
+        "demographic_disparity_analysis": {
+            "female_recall": 0.9042,
+            "male_recall": 0.9361,
+            "recall_disparity_ratio": 0.9659,
+            "female_precision": 0.4442,
+            "male_precision": 0.4216,
+            "fairness_summary": "Both male and female cohorts exhibit balanced sensitivity, indicating that the model detects diabetic risk across sexes without systematic omission."
+        }
+    },
+    "features_expected": [
+        "gender",
+        "age",
+        "hypertension",
+        "heart_disease",
+        "smoking_history",
+        "bmi",
+        "HbA1c_level",
+        "blood_glucose_level"
+    ]
+}

@@ -1,0 +1,33 @@
+# DOCUMENT: CDC Type 2 Diabetes Prevention
+# SOURCE_URL: https://www.cdc.gov/diabetes/prevention-type-2/index.html
+# PUBLISHER: Centers for Disease Control and Prevention (CDC)
+# INGESTION_DATE: 2026-11-09 11:20:00
+================================================================================
+
+## Preventing Type 2 Diabetes Overview
+
+According to the Centers for Disease Control and Prevention (CDC), type 2 diabetes can often be prevented or delayed—particularly if you have prediabetes (blood sugar levels higher than normal, but not yet high enough for a type 2 diagnosis). 
+
+## 1. Make Proven Lifestyle Changes
+- Lose a small amount of weight: If you are overweight, losing a modest amount of weight (such as 5% to 7% of your body weight) can significantly lower your risk of developing type 2 diabetes.
+- Eat healthy: Focus on making healthy food choices, watching portion sizes, and balancing your nutrition. Choose foods lower in saturated fats, trans fats, added sugars, and sodium.
+- Get physically active: Increase your physical activity—aiming for regular movement like brisk walking (at least 150 minutes per week) to help your body use insulin more effectively and lower blood glucose levels.
+
+## 2. Know Your Risk Factors and Get Tested
+You can have prediabetes for years without experiencing any clear symptoms. The CDC recommends talking to your doctor about getting a simple blood sugar test if you have risk factors such as:
+- Being overweight or having a high Body Mass Index (BMI).
+- Being 45 years of age or older.
+- Having a parent, brother, or sister with type 2 diabetes.
+- Being physically active less than three times a week.
+- Having a history of gestational diabetes (diabetes during pregnancy) or giving birth to a baby weighing more than 9 pounds.
+- Belonging to a higher-risk racial or ethnic group (African American, Hispanic/Latino American, American Indian, Alaska Native, Pacific Islander, or certain Asian American groups).
+
+## 3. The National Diabetes Prevention Program (National DPP)
+The CDC coordinates the National Diabetes Prevention Program, a lifestyle change program specifically designed to help people with prediabetes prevent or delay type 2 diabetes.
+- What it offers: A year-long, structured program led by a trained lifestyle coach where participants work in a group setting to learn sustainable habits regarding nutrition, physical activity, stress management, and coping skills.
+- The clinical impact: Scientific research demonstrates that participation in structured lifestyle change programs can cut the risk of developing type 2 diabetes by up to 58% (and 71% for individuals over 60 years of age).
+
+## Diagnostic Tests Supported by CDC Guidelines
+- Fasting Plasma Glucose (FPG) Test: Measures your blood glucose after an overnight fast. Normal is under 100 mg/dL; Prediabetes is 100 to 125 mg/dL; Diabetes is 126 mg/dL or higher.
+- A1C Test (HbA1c): Measures your average blood glucose over the past 2 to 3 months. Normal is below 5.7%; Prediabetes is 5.7% to 6.4%; Diabetes is 6.5% or higher.
+- Oral Glucose Tolerance Test (OGTT): Measures blood glucose before and 2 hours after drinking a sugary drink. Normal is under 140 mg/dL; Prediabetes is 140 to 199 mg/dL; Diabetes is 200 mg/dL or higher.
