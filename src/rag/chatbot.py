@@ -70,6 +70,32 @@ class HealthcareChatbot:
             self._client = genai.Client(api_key=self.api_key)
             self._sdk_type = "genai"
             logger.info("Initialized Google GenAI Client (google.genai).")
+            
+            # Dynamic model discovery to detect available models for this specific API key
+            try:
+                available_models = []
+                for m in self._client.models.list():
+                    clean_name = m.name.replace("models/", "") if m.name else ""
+                    available_models.append(clean_name)
+                
+                # Preferred candidate models in priority order
+                preferred_candidates = [
+                    "gemini-2.0-flash",
+                    "gemini-2.0-flash-lite",
+                    "gemini-1.5-flash-latest",
+                    "gemini-1.5-flash",
+                    "gemini-1.5-flash-8b",
+                    "gemini-1.5-pro",
+                    "gemini-pro"
+                ]
+                for candidate in preferred_candidates:
+                    if candidate in available_models:
+                        self.model_name = candidate
+                        logger.info(f"Auto-selected available Gemini model: '{self.model_name}'")
+                        break
+            except Exception as disc_err:
+                logger.info(f"Dynamic model listing skipped ({disc_err}); using '{self.model_name}'.")
+
         except Exception:
             try:
                 # Fallback to google.generativeai SDK
@@ -177,29 +203,63 @@ class HealthcareChatbot:
                 "model": "fallback-retrieval"
             }
 
-        # Generate via Live Gemini API
-        try:
-            if self._sdk_type == "genai":
-                response = self._client.models.generate_content(
-                    model=self.model_name,
-                    contents=prompt,
-                    config={
-                        "system_instruction": HEALTHCARE_SYSTEM_PROMPT,
-                        "temperature": TEMPERATURE
-                    }
-                )
-                answer_text = response.text.strip()
-            else: # google.generativeai
-                chat = self._client.start_chat()
-                response = chat.send_message(prompt)
-                answer_text = response.text.strip()
+        # Generate via Live Gemini API with automated multi-model fallback
+        candidate_models = [self.model_name]
+        for fallback in [
+            "gemini-2.0-flash",
+            "gemini-2.0-flash-lite",
+            "gemini-1.5-flash-latest",
+            "gemini-1.5-flash",
+            "gemini-1.5-flash-8b",
+            "gemini-pro"
+        ]:
+            if fallback not in candidate_models:
+                candidate_models.append(fallback)
 
-        except Exception as e:
-            logger.error(f"Gemini API generation error: {e}")
+        last_error = None
+        for candidate in candidate_models:
+            try:
+                if self._sdk_type == "genai":
+                    response = self._client.models.generate_content(
+                        model=candidate,
+                        contents=prompt,
+                        config={
+                            "system_instruction": HEALTHCARE_SYSTEM_PROMPT,
+                            "temperature": TEMPERATURE
+                        }
+                    )
+                    answer_text = response.text.strip()
+                    self.model_name = candidate
+                    last_error = None
+                    logger.info(f"Successfully generated clinical response using Gemini model: '{candidate}'.")
+                    break
+                else: # google.generativeai
+                    import google.generativeai as gai
+                    model_obj = gai.GenerativeModel(
+                        model_name=candidate,
+                        system_instruction=HEALTHCARE_SYSTEM_PROMPT
+                    )
+                    response = model_obj.generate_content(prompt)
+                    answer_text = response.text.strip()
+                    self.model_name = candidate
+                    last_error = None
+                    logger.info(f"Successfully generated clinical response using GenerativeModel: '{candidate}'.")
+                    break
+
+            except Exception as e:
+                last_error = e
+                logger.warning(f"Gemini generation with '{candidate}' failed: {e}. Trying next candidate...")
+                continue
+
+        if last_error is not None:
+            logger.error(f"All Gemini model candidates exhausted. Final error: {last_error}")
+            top_title = citations[0]['title'] if citations else "Clinical Reference"
+            top_snippet = citations[0]['snippet'] if citations else "No snippet available."
             answer_text = (
-                f"An error occurred while communicating with the Gemini API: {e}\n\n"
-                f"**Here are the verified excerpts retrieved from official health guidelines:**\n"
-                f"- {citations[0]['title']}: {citations[0]['snippet']}"
+                f"**Clinical Knowledge Base Excerpt ({top_title}):**\n\n"
+                f"{top_snippet}\n\n"
+                f"> *Note: Gemini API returned: `{last_error}`. "
+                f"The verified excerpts above were retrieved directly from your local clinical FAISS vector store.*"
             )
 
         return {
