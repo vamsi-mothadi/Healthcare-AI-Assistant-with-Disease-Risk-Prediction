@@ -37,3 +37,4 @@ def test_missing_api_key_fallback():
     assert response["context_used"] is True
     assert "fallback-retrieval" in response.get("model", "")
     assert len(response["citations"]) > 0
+
